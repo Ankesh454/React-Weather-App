@@ -1,0 +1,42 @@
+.weather-page { min-height: 100vh; padding: 34px 24px 28px; background: radial-gradient(ellipse at 80% 0%, #e5edff 0, transparent 36%), linear-gradient(145deg, #f8faff 0%, #f3f6fc 58%, #edf3fb 100%); }
+.weather-shell { width: min(100%, 880px); margin: 0 auto; }
+.app-header { display: flex; align-items: center; gap: 12px; }
+.brand-mark { display: grid; place-items: center; width: 43px; height: 43px; border-radius: 14px; color: white; background: linear-gradient(145deg, #5c83ef, #4162d2); box-shadow: 0 8px 18px #4169e133; }
+.brand-mark svg { font-size: 24px; }
+.eyebrow { margin: 0; color: #7789a7; font-size: 10px; font-weight: 700; letter-spacing: .14em; }
+.app-header h1 { margin: 1px 0 0; color: #1b2e50; font: 800 19px/1.15 'Manrope', sans-serif; letter-spacing: -.04em; }
+.intro { padding: 63px 0 25px; }
+.intro-kicker { margin: 0 0 12px; color: #5374c8; font-size: 13px; font-weight: 700; }
+.intro h2 { margin: 0; color: #172b4d; font: 700 clamp(36px, 5vw, 51px)/1.13 'Manrope', sans-serif; letter-spacing: -.055em; }
+.intro-copy { margin: 14px 0 0; color: #77859b; font-size: 15px; }
+.search-panel { padding: 18px; border: 1px solid #e5ebf4; border-radius: 18px; background: #ffffffd9; box-shadow: 0 12px 38px #344d7410; }
+.search-form { display: flex; align-items: stretch; gap: 11px; }
+.city-input .MuiOutlinedInput-root { min-height: 54px; border-radius: 12px; background: #fff; color: var(--ink); }
+.city-input .MuiOutlinedInput-notchedOutline { border-color: #dce4f0; }
+.city-input .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline { border-color: #aabce0; }
+.city-input .MuiInputLabel-root { color: #7b89a0; }
+.city-input .MuiInputAdornment-root { color: #8292ad; }
+.search-button.MuiButton-root { min-width: 122px; border-radius: 12px; padding: 0 24px; text-transform: none; font-size: 14px; font-weight: 700; background: #4169e1; box-shadow: 0 6px 13px #4169e12e; }
+.search-button.MuiButton-root:hover { background: #3459ca; box-shadow: 0 8px 18px #4169e13d; }
+.search-button span { margin-left: 8px; }
+.search-alert { margin-top: 13px; border-radius: 11px !important; font-size: 13px !important; }
+.empty-state { margin-top: 31px; min-height: 260px; padding: 36px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #e5ebf4; border-radius: 20px; background: linear-gradient(130deg, #ffffffdf, #f9fbff); text-align: center; }
+.empty-art { display: grid; place-items: center; width: 68px; height: 68px; margin-bottom: 18px; border-radius: 23px; color: #6484e1; background: linear-gradient(140deg, #e4edff, #f3f6ff); }
+.empty-art svg { font-size: 36px; }
+.empty-state h3 { margin: 0; color: #243859; font: 700 18px 'Manrope', sans-serif; }
+.empty-state p { max-width: 365px; margin: 8px 0 0; color: #7c8aa0; font-size: 14px; line-height: 1.6; }
+.page-footer { padding-top: 27px; color: #94a0b2; font-size: 11px; text-align: center; }
+
+@media (max-width: 560px) {
+  .weather-page { padding: 22px 16px; }
+  .intro { padding-top: 48px; }
+  .intro h2 { font-size: 38px; }
+  .search-panel { padding: 12px; }
+  .search-form { flex-direction: column; }
+  .search-button.MuiButton-root { min-height: 49px; }
+  .empty-state { margin-top: 20px; min-height: 228px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
