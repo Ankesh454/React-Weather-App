@@ -1,16 +1,61 @@
-# React + Vite
+# WeatherNow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive weather dashboard built with React, Vite, and Material UI. Search for a city to view its current conditions, temperature, humidity, wind, pressure, visibility, and local sunrise and sunset times.
 
-Currently, two official plugins are available:
+Weather data comes from the [OpenWeather Current Weather API](https://openweathermap.org/current).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Getting started
 
-## React Compiler
+### Requirements
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Node.js and npm
+- An OpenWeather API key
 
-## Expanding the ESLint configuration
+### Install dependencies
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+```
+
+### Configure the API key
+
+Create a `.env` file in this project directory and add your key:
+
+```env
+VITE_OPENWEATHER_API_KEY=your_actual_api_key
+```
+
+You can copy `.env.example` as a starting point, then replace its placeholder with your key. Restart the Vite server after changing `.env`.
+
+Vite exposes variables prefixed with `VITE_` to browser code. Use a key intended for client-side use and configure any available usage restrictions with OpenWeather. Do not put private server credentials in this file.
+
+### Start the development server
+
+```bash
+npm run dev
+```
+
+Open the local URL printed by Vite in your browser.
+
+## Available scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the development server with hot reload. |
+| `npm run build` | Create a production build in `dist/`. |
+| `npm run preview` | Preview the production build locally. |
+| `npm run lint` | Run ESLint. |
+
+## Features
+
+- Search by city using the Search button or Enter.
+- Loading, empty, and error states, including helpful messages for missing or invalid API keys.
+- Metric weather data displayed in Celsius.
+- Responsive layout and keyboard-visible focus states.
+
+## Tech stack
+
+- React
+- Vite
+- Material UI
+- OpenWeather Current Weather API
